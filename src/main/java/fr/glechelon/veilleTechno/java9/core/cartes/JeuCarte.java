@@ -25,13 +25,29 @@ public class JeuCarte {
         return jeuCarte;
     }
 
-    public Set<Carte> getFigures(){
-        //return cartes.stream().takeWhile(carte -> carte)
-        return null;
+
+    public Set<Carte> getPremiereCouleur() {
+        return cartes.stream()
+                .takeWhile(carte -> carte.getCouleur().equals(cartes.get(0).getCouleur()))
+                .collect(Collectors.toSet());
     }
 
+
+    public Set<Carte> retirerPremiereCouleur() {
+        return cartes.stream()
+                .dropWhile(carte -> carte.getCouleur().equals(cartes.get(0).getCouleur()))
+                .collect(Collectors.toSet());
+    }
+
+
+
     public Set<Carte> prendreCinqPremieresCartes() {
-        return Set.of(cartes.get(51), cartes.get(50), cartes.get(49), cartes.get(48), cartes.get(47)); //Pas beau mais c'est pour tester le Set.of()
+        return Set.of(
+                cartes.get(51),
+                cartes.get(50),
+                cartes.get(49),
+                cartes.get(48),
+                cartes.get(47)); //Pas beau mais c'est pour tester le Set.of()
     }
 
     public List<Carte> getCartes() {

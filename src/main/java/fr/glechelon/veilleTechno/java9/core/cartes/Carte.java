@@ -36,4 +36,13 @@ public class Carte {
     public int hashCode() {
         return Objects.hash(couleur, valeur);
     }
+
+    public boolean isFigure() {
+        return valeur.getPoints() > 10 && valeur.getPoints() < 14;
+    }
+
+
+    public Couleurs getCouleur() {
+        return couleur;
+    }
 }

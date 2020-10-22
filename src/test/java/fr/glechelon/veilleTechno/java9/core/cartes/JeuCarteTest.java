@@ -39,4 +39,33 @@ class JeuCarteTest {
         ).containsAll(out));
     }
 
+
+    @Test
+    public void testGetPremiereCouleur(){
+
+        //GIVEN
+        JeuCarte jeuCarte = JeuCarte.build();
+
+        //WHEN
+        Set<Carte> out = jeuCarte.getPremiereCouleur();
+
+        //THEN
+        Assertions.assertEquals(13, out.size());
+    }
+
+
+
+
+    @Test
+    public void testRetirerPremiereCouleur(){
+
+        //GIVEN
+        JeuCarte jeuCarte = JeuCarte.build();
+
+        //WHEN
+        Set<Carte> out = jeuCarte.retirerPremiereCouleur();
+
+        //THEN
+        Assertions.assertEquals(39, out.size());
+    }
 }

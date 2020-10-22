@@ -22,4 +22,8 @@ public enum ValeursCartes {
     private ValeursCartes(int points){
         this.points = points;
     }
+
+    public int getPoints() {
+        return points;
+    }
 }
