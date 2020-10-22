@@ -89,9 +89,9 @@ Java FX: Api skin publique pour la customization
 ## Performance et sécurité
 
 * Changement de GC par défaut -> GC1:
-* Plus petites zones
-* incrémental
-* marquage en parallèle 
-* Moins de temps de pause.
+    * Plus petites zones
+    * incrémental
+    * marquage en parallèle 
+    * Moins de temps de pause.
 * Compact string: si possible ASCII sinon UNICODE : les string ne contenant pas de caractères unicode prendront 50% de la place seulement par rapport à avant.
 * TLS : ALPN : pour HTTP2
